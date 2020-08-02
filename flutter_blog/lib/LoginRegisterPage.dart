@@ -14,7 +14,7 @@ class _LoginRegisterState extends State<LoginRegisterPage>{
 
   }
   void moveToRegister(){
-    
+
   }
 
 
@@ -30,6 +30,7 @@ class _LoginRegisterState extends State<LoginRegisterPage>{
         return new Scaffold(
           appBar: new AppBar(
             title: new Text("Flutter Blog App"),
+
           ),
           body:new Container(
             margin: EdgeInsets.all(15.0),
@@ -48,18 +49,18 @@ class _LoginRegisterState extends State<LoginRegisterPage>{
 //textFiled
   List<Widget>createInputs(){
     return[
-      SizedBox(height: 10.0,),
+      SizedBox(height: 8.0,),
       logo(),
-      SizedBox(height: 20.0,),
+      SizedBox(height: 10.0,),
       new TextField(
         decoration: new InputDecoration(labelText: "User Email"),
       ),
-      SizedBox(height: 10.0,),
+      SizedBox(height: 8.0,),
       new TextField(
         decoration: new InputDecoration(labelText: "Password"),
 
       ),
-      SizedBox(height: 20.0,),
+      SizedBox(height: 10.0,),
 
     ];
   }
@@ -78,14 +79,16 @@ class _LoginRegisterState extends State<LoginRegisterPage>{
   List<Widget>createButtons(){
     return[
       new RaisedButton(
+        
         child: new Text("Login",style: new TextStyle(fontSize: 20.0),),
+
         textColor: Colors.white,
         color: Colors.pink,
         onPressed: ValidateAndSave,
       ),
       new FlatButton(
         child: new Text("Not have an Account ? Create?",style: new TextStyle(fontSize: 20.0),),
-        textColor: Colors.white,
+        textColor: Colors.purple,
         onPressed: moveToRegister,
       ),
 
